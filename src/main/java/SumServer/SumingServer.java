@@ -1,12 +1,7 @@
 package SumServer;
-
-
-
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-
 import java.io.IOException;
-
 public class SumingServer {
     public static void main(String[] args) {
         System.out.println("Hello gRPC");
@@ -19,8 +14,6 @@ public class SumingServer {
         }catch (IOException e){
             e.printStackTrace();
         }
-
-
         Runtime.getRuntime().addShutdownHook(new Thread(
                 () -> {
                     System.out.println("Received Shutdown Request");
@@ -28,12 +21,10 @@ public class SumingServer {
                     System.out.println("Successfully Shutdown Server");
                 }
         ));
-
         try{
             server.awaitTermination();
         } catch (InterruptedException e){
             e.printStackTrace();
         }
-
     }
 }

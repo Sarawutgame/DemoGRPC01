@@ -1,10 +1,7 @@
 syntax = "proto3";
-
 package sum;
-
 option java_package = "com.proto.sum";
 option java_multiple_files = true;
-
 message Suming{
   int32 num1 = 1;
   int32 num2 = 2;
